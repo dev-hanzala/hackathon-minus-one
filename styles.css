@@ -1,0 +1,97 @@
+/* Important: I had help from AI to generate comments, I dont have much experience with large projects so i struggle with writing comments properly.
+I was origonally going to not use AI; however the lack of proper comments was really confusing me so i used it for that purpose. I just want to be transparrent.
+Also the colorscheme used is dracula */
+
+* {
+  box-sizing: border-box; /* Make sure padding and borders are included in the total width and height */
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Set the font for the whole page */
+  background-color: #282a36; /* Dark background color */
+  color: #f8f8f2; /* Light text color for contrast */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  overflow-x: hidden; /* Hide any horizontal scroll */
+}
+
+header {
+  background-color: #44475a; /* Darker header background */
+  padding: 20px; /* Space inside the header */
+  text-align: center; /* Center the header text */
+}
+
+img {
+  display: block; /* Make the image a block element */
+  margin-left: auto; /* Center the image */
+  margin-right: auto; /* Center the image */
+  border-radius: 90px; /* Round the corners of the image */
+  height: 200px; /* Set a fixed height for the image */
+  width: 200px; /* Set a fixed width for the image */
+}
+
+nav ul {
+  padding: 0; /* No padding for the navigation list */
+}
+
+nav ul li {
+  display: inline; /* Show list items in a row */
+  margin: 0 15px; /* Space between the list items */
+}
+
+nav a {
+  color: #bd93f9; /* Color for the links */
+  text-decoration: none; /* Remove underline from links */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Underline links when hovered */
+}
+
+section {
+  max-width: calc(100% - 40px); /* Keep sections from overflowing */
+  padding: 20px; /* Space inside sections */
+  margin: 20px; /* Space around sections */
+  border-radius: 5px; /* Slightly round the corners */
+  background-color: #44475a; /* Same dark background for sections */
+}
+
+.project,
+.institution {
+  margin-bottom: 20px; /* Space below each project */
+  padding: 10px; /* Space inside each project */
+  border: 1px solid #6272a4; /* Border color for projects */
+  border-radius: 5px; /* Round the corners of project boxes */
+}
+
+footer {
+  text-align: center; /* Center the footer text */
+  padding: 10px; /* Space inside the footer */
+  background-color: #44475a; /* Dark footer background */
+  position: relative; /* Positioning for the footer */
+  bottom: 0; /* Stick the footer to the bottom */
+  width: 100%; /* Make the footer full width */
+}
+
+.header-container {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the header items */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 20px; /* Space below the header */
+}
+
+#projects-hide,
+#education-hide {
+  background-color: #bd93f9; /* Button color */
+  color: #f8f8f2; /* Button text color */
+  border: none; /* No border for the button */
+  border-radius: 5px; /* Round the button corners */
+  padding: 10px 15px; /* Space inside the button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s; /* Smooth color change on hover */
+}
+
+#projects-hide:hover,
+#education-hide:hover {
+  background-color: #9b59b6; /* Darker button color on hover */
+}
