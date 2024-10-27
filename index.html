@@ -2,142 +2,126 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Resume</title>
+    <meta
+      name="viewport"
+      content="width=device-width,height=device-height,initial-scale=1.0"
+    />
     <link rel="stylesheet" href="styles.css" />
+    <title>Resume Builder</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
   </head>
   <body>
     <header>
-      <h1>Hanzala Waseem</h1>
-      <nav>
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <h1>Resume</h1>
+      <button id="export-pdf">Export</button>
     </header>
-    <section id="picture">
-      <img
-        src="images/profile-picture.png"
-        alt="Profile picture of Hanzala Waseem."
-      />
-    </section>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>
-        Welcome to my Resume! I am an intermediate student with a passion for
-        computers.
-      </p>
-    </section>
 
-    <section id="education">
-      <div class="header-container">
-        <h2 id="education-heading">Education</h2>
-        <button id="education-hide">Hide</button>
-      </div>
-      <div class="institution">
-        <h3>The Educators:</h3>
-        <p>Completed montisarri level education.</p>
-      </div>
-      <div class="institution">
-        <h3>Crescent Public School:</h3>
-        <p>Completed primary level education.</p>
-      </div>
-      <div class="institution">
-        <h3>Metropoliton Public School:</h3>
-        <p>Completed metric level education.</p>
-      </div>
-      <div class="institution">
-        <h3>Govt. Degree Collage Sachal Goth:</h3>
-        <p>Currently completing intermediate education.</p>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="header-container">
-        <h2 id="projects-heading">Projects</h2>
-        <button id="projects-hide">Hide</button>
-      </div>
-      <div class="project">
-        <h3>CLI Calculator:</h3>
-        <p>This is a simple calculator created in TypeScript using Inquirer.</p>
-        <a href="https://github.com/dev-hanzala/hanzalas-calculator.git"
-          >Github</a
-        >
-        <p>NPX: <code>hanzalas-calculator</code></p>
-      </div>
-      <div class="project">
-        <h3>CLI Calculator:</h3>
-        <p>This is a simple calculator created in typescript using inquirer.</p>
-        <a href="https://github.com/dev-hanzala/hanzalas-calculator.git"
-          >Github</a
-        >
-        <p>NPX: <code>hanzalas-calculator</code></p>
-      </div>
-      <div class="project">
-        <h3>TO-DO List:</h3>
-        <p>This is a simple todo list created in typescript using inquirer.</p>
-        <a href="https://github.com/dev-hanzala/hanzalas-todo-list.git"
-          >Github</a
-        >
-        <p>NPX: <code>hanzalas-todo-list</code></p>
-      </div>
-      <div class="project">
-        <h3>ATM Demo:</h3>
-        <p>
-          A simple cli script allowing you to withdraw and check your balance.
-        </p>
-        <a href="https://github.com/dev-hanzala/hanzalas-atm.git">Github</a>
-        <p>NPX: <code>hanzalas-atm</code></p>
-      </div>
-      <div class="project">
-        <h3>CLI Guessing Game:</h3>
-        <p>A simple cli based guessing game built in Typescript.</p>
-        <a href="https://github.com/dev-hanzala/hanzalas-cli-guessing-game.git"
-          >Github</a
-        >
-        <p>NPX: <code>hanzalas-cli-guessing-game</code></p>
-      </div>
-      <div class="project">
-        <h3>Currency Converter:</h3>
-        <p>A simple currency converter</p>
-        <a href="https://github.com/dev-hanzala/hanzalas-currency-converter.git"
-          >Github</a
-        >
-        <p>NPX: <code>hanzalas-currency-converter</code></p>
-      </div>
-      <div class="project">
-        <h3>Word Counter:</h3>
-        <p>A simple word counter.</p>
-        <a href="https://github.com/dev-hanzala/hanzalas-word-counter.git"
-          >Github</a
-        >
-        <p>NPX: <code>hanzalas-word-counter</code></p>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>
-        Email:
-        <a href="mailto:hanzala-waseem@proton.me">hanzala-waseem@proton.me</a>
-      </p>
-      <p>
-        Mastodon:
-        <a href="https://mastodon.social/@HanzalaWaseem"
-          >@HanzalaWaseem@mastodon.social</a
-        >
-      </p>
-      <p>
-        Linkedin:
-        <a href="https://www.linkedin.com/in/dev-hanzala">Hanzala Waseem</a>
-      </p>
-    </section>
-
+    <main>
+      <section class="about">
+        <button class="edit">Edit</button>
+        <div class="profile-picture-wrapper">
+          <img
+            class="profile-picture"
+            src="images/profile-picture.png"
+            alt="Profile picture of me"
+          />
+        </div>
+        <div class="about-text">
+          <h2>Name</h2>
+          <p>Hanzala Waseem</p>
+          <h2>About</h2>
+          <p>
+            I am a student learning web development with Next.js and Tailwind
+            CSS. I am eager to learn and grow as a software developer and to
+            contribute to the development of high-quality software applications.
+            I am also interested in learning about agile development
+            methodologies and version control systems such as git.
+          </p>
+        </div>
+      </section>
+      <section class="education">
+        <button class="edit">Edit</button>
+        <h2>Education</h2>
+        <ul>
+          <li>
+            <h3>Metric</h3>
+            <p>Graduated Metric.</p>
+          </li>
+          <li>
+            <h3>Intermediate</h3>
+            <p>Graduating Intermediate.</p>
+          </li>
+          <li>
+            <h3>GIAIC</h3>
+            <p>Ongoing course.</p>
+          </li>
+          <li>
+            <h3>Primary</h3>
+            <p>Graduated Primary.</p>
+          </li>
+        </ul>
+      </section>
+      <section class="skills">
+        <button class="edit">Edit</button>
+        <h2>Skills</h2>
+        <ul>
+          <li>
+            <h3>TypeScript</h3>
+            <p>Statically typed language for better code maintainability.</p>
+          </li>
+          <li>
+            <h3>React</h3>
+            <p>Library for building reactive user interfaces.</p>
+          </li>
+          <li>
+            <h3>Next.js</h3>
+            <p>
+              React framework for building server rendered and statically
+              generated websites and applications.
+            </p>
+          </li>
+          <li>
+            <h3>Tailwind CSS</h3>
+            <p>
+              Utility-first CSS framework for building custom user interfaces.
+            </p>
+          </li>
+        </ul>
+      </section>
+      <section class="projects">
+        <button class="edit">Edit</button>
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <h3>Countdown Timer</h3>
+            <p>A simple timer that counts down to a specified date and time.</p>
+          </li>
+          <li>
+            <h3>Todo List</h3>
+            <p>
+              An application to keep track of tasks with the ability to add,
+              edit, and remove items.
+            </p>
+          </li>
+          <li>
+            <h3>Word Counter</h3>
+            <p>A tool to count the number of words in a given text input.</p>
+          </li>
+          <li>
+            <h3>Weather Widget</h3>
+            <p>
+              A widget that displays the current weather for a specified
+              location.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
     <footer>
-      <p>&copy; 2024 Hanzala Waseem</p>
+      <p>Copyright &copy; 2022 Hanzala Waseem</p>
     </footer>
     <script src="script.js"></script>
   </body>
 </html>
+
+
